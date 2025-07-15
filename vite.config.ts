@@ -7,5 +7,5 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: '/boomerang--2026/', // Replace with your repository name
+  base: './', // Use relative paths for assets
 });
