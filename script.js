@@ -1,10 +1,34 @@
 // Navigation Toggle
-const navToggle = document.getElementById('nav-toggle');
-const navMenu = document.getElementById('nav-menu');
-
-navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    navToggle.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navBackdrop = document.getElementById('nav-backdrop');
+    
+    if (!navToggle || !navMenu || !navBackdrop) {
+        console.error('Navigation elements not found');
+        return;
+    }
+    
+    // Function to toggle the menu
+    function toggleMenu() {
+        console.log('Toggle menu clicked');
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+        navBackdrop.classList.toggle('active');
+        
+        // Prevent body scrolling when menu is open
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }
+    
+    // Toggle menu on hamburger click
+    navToggle.addEventListener('click', toggleMenu);
+    
+    // Close menu when clicking on backdrop
+    navBackdrop.addEventListener('click', toggleMenu);
 });
 
 // Close menu when clicking on links
@@ -12,6 +36,8 @@ document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         navToggle.classList.remove('active');
+        navBackdrop.classList.remove('active');
+        document.body.style.overflow = '';
     });
 });
 
@@ -281,5 +307,62 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('section').forEach(section => {
     revealObserver.observe(section);
 });
+
+// Player Filtering and Search Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const searchInput = document.getElementById('playerSearch');
+    const playerItems = document.querySelectorAll('.player-item');
+    
+    // Filter functionality
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            playerItems.forEach(item => {
+                if (filter === 'all') {
+                    item.style.display = 'grid';
+                } else {
+                    const events = item.getAttribute('data-events');
+                    if (events.includes(filter)) {
+                        item.style.display = 'grid';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+    
+    // Search functionality
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            playerItems.forEach(item => {
+                const playerName = item.querySelector('.player-name').textContent.toLowerCase();
+                const playerCountry = item.querySelector('.player-country').textContent.toLowerCase();
+                
+                if (playerName.includes(searchTerm) || playerCountry.includes(searchTerm)) {
+                    item.style.display = 'grid';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    }
+});
+
+// Load More Players functionality
+function loadMorePlayers() {
+    // In a real implementation, this would load additional players from a database
+    // For now, we'll just show a message
+    alert('Loading more players... In a real implementation, this would load the remaining players from the database.');
+}
 
 console.log('🎾 Boomerang 2026 Tennis Tournament website loaded successfully!');
