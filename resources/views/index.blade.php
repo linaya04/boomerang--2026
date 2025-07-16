@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boomerang Cup 2026 Tennis Tournament</title>
-    <link rel="stylesheet" href="{{ asset('styles.css') }}">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="{{ asset('images/trophy-logo.png') }}" alt="Trophy logo" class="nav-trophy-logo" onerror="this.src='{{ asset('images/trophy.svg') }}'; this.onerror=null;">
+                <img src="images/trophy-logo.png" alt="Trophy logo" class="nav-trophy-logo" onerror="this.src='images/trophy.svg'; this.onerror=null;">
                 <h2>Boomerang Cup 2026</h2>
             </div>
             <div class="nav-menu" id="nav-menu">
@@ -696,6 +696,6 @@
         </div>
     </footer>
 
-    <script src="{{ asset('script.js') }}" type="module"></script>
+    <script src="script.js" type="module"></script>
 </body>
 </html>

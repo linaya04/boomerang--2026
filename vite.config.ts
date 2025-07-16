@@ -7,5 +7,7 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: './', // Use relative paths for assets
+  // Base URL for GitHub Pages deployment
+  // Replace 'boomerang--2026' with your GitHub repo name
+  base: '/boomerang--2026/',
 });

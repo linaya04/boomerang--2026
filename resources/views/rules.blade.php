@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rules & Regulations - Boomerang Cup 2026</title>
-    <link rel="stylesheet" href="{{ asset('styles.css') }}">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="{{ asset('images/trophy-logo.png') }}" alt="Trophy logo" class="nav-trophy-logo">
+                <img src="images/trophy-logo.png" alt="Trophy logo" class="nav-trophy-logo">
                 <h2>Boomerang Cup 2026</h2>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="{{ url('/') }}#home" class="nav-link">Home</a>
-                <a href="{{ url('/') }}#about" class="nav-link">About</a>
-                <a href="{{ url('/') }}#schedule" class="nav-link">Schedule</a>
-                <a href="{{ url('/') }}#registration" class="nav-link">Register</a>
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#schedule" class="nav-link">Schedule</a>
+                <a href="index.html#registration" class="nav-link">Register</a>
                 <a href="rules.html" class="nav-link active">Rules</a>
                 <a href="index.html#contact" class="nav-link">Contact</a>
             </div>
@@ -81,6 +81,6 @@
         </div>
     </footer>
 
-    <script src="{{ asset('script.js') }}" type="module"></script>
+    <script src="script.js" type="module"></script>
 </body>
 </html>
