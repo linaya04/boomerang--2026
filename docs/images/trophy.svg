@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <!-- Base -->
+  <rect x="110" y="220" width="80" height="15" fill="#e9b94f" stroke="#331f00" stroke-width="4"/>
+  <rect x="90" y="235" width="120" height="25" fill="#e9b94f" stroke="#331f00" stroke-width="4"/>
+  <circle cx="150" cy="248" r="10" fill="#e9b94f" stroke="#331f00" stroke-width="2"/>
+  
+  <!-- Trophy cup -->
+  <path d="M125 100 L125 200 L175 200 L175 100 Z" fill="#e9b94f" stroke="#331f00" stroke-width="4"/>
+  <path d="M125 200 L135 220 L165 220 L175 200" fill="#e9b94f" stroke="#331f00" stroke-width="4"/>
+  
+  <!-- Trophy top -->
+  <path d="M120 100 L180 100 L175 85 L125 85 Z" fill="#e9b94f" stroke="#331f00" stroke-width="4"/>
+  <circle cx="150" cy="75" r="8" fill="#e9b94f" stroke="#331f00" stroke-width="4"/>
+  
+  <!-- Boomerangs -->
+  <path d="M70 90 C40 120, 50 180, 120 180 C110 150, 100 120, 70 90" fill="#e9b94f" stroke="#331f00" stroke-width="4"/>
+  <path d="M230 90 C260 120, 250 180, 180 180 C190 150, 200 120, 230 90" fill="#e9b94f" stroke="#331f00" stroke-width="4"/>
+</svg>
