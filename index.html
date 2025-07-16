@@ -2,13 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0;url=./docs/index.html">
-  <title>Boomerang Cup 2026 Tennis Tournament</title>
-  <script>
-    window.location.href = "./docs/index.html";
+  <title>Boomerang Cup 2026</title>
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // MIT License
+    // https://github.com/rafgraph/spa-github-pages
+    (function(l) {
+      if (l.search[1] === '/' ) {
+        var decoded = l.search.slice(1).split('&').map(function(s) { 
+          return s.replace(/~and~/g, '&')
+        }).join('?');
+        window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location))
   </script>
+  <meta http-equiv="refresh" content="0;url=./docs/index.html">
 </head>
 <body>
-  <p>If you are not redirected automatically, follow this <a href="./docs/index.html">link to the Boomerang Cup 2026</a>.</p>
+  <p>Redirecting to <a href="./docs/index.html">Boomerang Cup 2026</a>...</p>
 </body>
 </html>
