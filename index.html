@@ -1,27 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Boomerang Cup 2026</title>
-  <script type="text/javascript">
-    // Single Page Apps for GitHub Pages
-    // MIT License
-    // https://github.com/rafgraph/spa-github-pages
-    (function(l) {
-      if (l.search[1] === '/' ) {
-        var decoded = l.search.slice(1).split('&').map(function(s) { 
-          return s.replace(/~and~/g, '&')
-        }).join('?');
-        window.history.replaceState(null, null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-        );
-      }
-    }(window.location))
-  </script>
-  <meta http-equiv="refresh" content="0;url=./docs/index.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boomerang Cup 2026 Tennis Tournament</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .content {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #1e3a8a;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #153170;
+        }
+    </style>
 </head>
 <body>
-  <p>Redirecting to <a href="./docs/index.html">Boomerang Cup 2026</a>...</p>
+    <header>
+        <div class="container">
+            <img src="images/trophy-logo.png" alt="Boomerang Cup Trophy" class="logo">
+            <h1>Boomerang Cup 2026</h1>
+            <p>Tennis Tournament</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>Welcome to the Boomerang Cup 2026!</h2>
+            <p>The premier international tennis tournament returning to Australia in 2026.</p>
+            
+            <p>Our website is currently being updated. Please check back soon for more information.</p>
+            
+            <a href="docs/index.html" class="btn">Visit Full Website</a>
+        </div>
+    </div>
 </body>
 </html>
 
